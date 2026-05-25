@@ -5,7 +5,7 @@ import ClickButton from "./components/ClickButton";
 import FruitList from "./components/FruitList";
 
 export default function App() {
-  // --- ToDo List state ---
+
   const [text, setText] = useState("");
   const [tasks, setTasks] = useState([]);
 
@@ -25,7 +25,7 @@ export default function App() {
     setTasks(tasks.filter(t => t.id !== id));
   };
 
-  // --- умовний рендеринг ---
+
   const isLoggedIn = true;
 
   return (
@@ -33,28 +33,25 @@ export default function App() {
       <h1>Практична робота №9</h1>
       <p>React + Vite</p>
 
-      {/* Компоненти з props */}
       <h2>User Cards</h2>
       <UserCard name="Іван" role="Student" />
       <UserCard name="Олена" role="Teacher" />
 
-      {/* Лічильник */}
       <h2>Counter</h2>
       <Counter />
 
-      {/* Подія */}
       <h2>Click Button</h2>
       <ClickButton />
 
-      {/* Список фруктів */}
+
       <h2>Fruit List</h2>
       <FruitList />
 
-      {/* Умовний рендеринг */}
+  
       <h2>Login State</h2>
       {isLoggedIn ? <p>Ви увійшли</p> : <p>Увійдіть у систему</p>}
 
-      {/* Mini ToDo List */}
+
       <h2>Mini ToDo</h2>
       <input
         value={text}
